@@ -1,0 +1,18 @@
+<!-- <form method="POST" action="{% url 'retrain_model' %}">
+    {% csrf_token %}
+    <button type="submit">Start Retraining</button>
+</form> -->
+
+
+
+<form method="POST" action="{% url 'retrain_model' %}" id="retrain-form">
+    {% csrf_token %}
+    <button type="submit">Start Retraining</button>
+</form>
+
+<script>
+    document.getElementById("retrain-form").onsubmit = function() {
+        window.open("https://colab.research.google.com/drive/1ThYvuBHf8xbD_vMdbdGj5f5YJtwks8xv", "_blank");
+    };
+</script>
+
